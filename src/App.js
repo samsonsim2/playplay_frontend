@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-
+import games from './utils/Games';
+ 
 function App() {
-  return (
-    <div className="App">
-     <h1>Play play test</h1>
-    </div>
+  return (<>
+  {games.map((game)=>{
+    return <div>
+      <h1>{game.title}</h1>
+      <h1>{game.content}</h1>
+      <h1>{game.tags}</h1>
+      </div>
+  })}
+  </>
+     
   );
 }
 
