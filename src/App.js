@@ -4,6 +4,8 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import games from "./utils/Games";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import HowToPlay from "./pages/HowToPlay";
+import Layout from "./pages/Layout";
 
 const theme = createTheme({
   palette: {
@@ -35,6 +37,9 @@ const theme = createTheme({
           },
         },
       },
+      defaultProps: {
+        disableRipple: true,
+      },
     },
   },
 });
@@ -45,7 +50,9 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Layout />}>
+              <Route path="how-to-play" element={<HowToPlay />} />
+            </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
