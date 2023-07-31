@@ -5,17 +5,51 @@ import games from "./utils/Games";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
+const theme = createTheme({
+  palette: {
+    mode: "light",
+    primary: {
+      main: "#000000",
+    },
+    secondary: {
+      main: "#00b5c5",
+      contrastText: "#ffffff",
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          padding: "0",
+          width: "100%",
+          fontWeight: 700,
+          textTransform: "lowercase",
+          "&.Mui-selected": {
+            backgroundColor: "#FFFFFF",
+          },
+          "&.Mui-selected:hover": {
+            backgroundColor: "#FFFFFF",
+          },
+          "&:hover": {
+            backgroundColor: "none",
+          },
+        },
+      },
+    },
+  },
+});
+
 function App() {
   return (
     <>
-      {/* <ThemeProvider> */}
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-      {/* </ThemeProvider> */}
+      <ThemeProvider theme={theme}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </ThemeProvider>
       {/* {games.map((game) => {
         return (
           <div>
