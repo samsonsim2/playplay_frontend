@@ -25,7 +25,12 @@ const Home = () => {
           }}
         >
           <div style={{ width: "40%" }}>
-            <Button style={{ fontSize: "1.2rem" }}>let's begin</Button>
+            <Button
+              style={{ fontSize: "1.2rem" }}
+              onClick={() => navigate("/begin")}
+            >
+              let's begin
+            </Button>
             <hr style={{ border: "1px solid black" }} />
             <Button
               style={{ fontSize: "1.2rem" }}

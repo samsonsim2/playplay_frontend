@@ -5,11 +5,11 @@ import { Outlet, Link, useLocation } from "react-router-dom";
 
 const Layout = () => {
   const currentPath = useLocation().pathname;
-  console.log(currentPath);
 
   const navMenu = {
     "/": "Home",
     "/how-to-play": "menu",
+    "/begin": "menu",
   };
 
   return (

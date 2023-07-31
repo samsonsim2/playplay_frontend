@@ -41,7 +41,6 @@ const Navbar = (props) => {
                   fontSize: "1rem",
                 }}
               >
-                {" "}
                 {props.title}
               </p>
             </IconButton>

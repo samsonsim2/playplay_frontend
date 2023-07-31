@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import HowToPlay from "./pages/HowToPlay";
 import Layout from "./pages/Layout";
+import Begin from "./pages/Begin";
 
 const theme = createTheme({
   palette: {
@@ -52,6 +53,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route path="how-to-play" element={<HowToPlay />} />
+              <Route path="begin" element={<Begin />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
