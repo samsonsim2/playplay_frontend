@@ -37,34 +37,21 @@
   }
 }
 
-.looking-svg {
+.deselected {
+  stroke: #3faaf5 !important;
+}
+
+.parts-stroke {
   fill: none;
   stroke: #000;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.stroke-1 {
   stroke-width: 1.95px;
 }
 
-.speaking-svg {
-  fill: none;
-  stroke: #000;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2.2px;
-}
-
-.arms-svg {
-  fill: none;
-  stroke: #000;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2.2px;
-}
-
-.legs-svg {
-  fill: none;
-  stroke: #000;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.stroke-2 {
   stroke-width: 2.2px;
 }
