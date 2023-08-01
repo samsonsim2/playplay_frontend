@@ -7,6 +7,7 @@ import LegsImage from "../assets/Legs";
 import VoiceOnlyImage from "../assets/VoiceOnly";
 import SensitiveImage from "../assets/Sensitive";
 import FingerPlayImage from "../assets/FingerPlay";
+import { Link } from "react-router-dom";
 
 const Begin = () => {
   const [lookingSelect, setLookingSelect] = useState(true);
@@ -42,6 +43,16 @@ const Begin = () => {
       setSensitiveSelect(false);
       setVoiceSelect(false);
     }
+  };
+
+  const dataForQuery = {
+    looking: lookingSelect,
+    speaking: speakingSelect,
+    arms: armsSelect,
+    legs: legsSelect,
+    voice: voiceSelect,
+    sensitive: sensitiveSelect,
+    finger: fingerSelect,
   };
 
   return (
@@ -153,9 +164,14 @@ const Begin = () => {
           </p>
         </Grid>
       </Grid>
-      <Button sx={{ mt: 6, fontSize: "1.5rem", textTransform: "none" }}>
+      <Link
+        to="game-info"
+        state={dataForQuery}
+        className="link-button"
+        style={{ marginTop: "40px" }}
+      >
         Play-Play!
-      </Button>
+      </Link>
     </>
   );
 };

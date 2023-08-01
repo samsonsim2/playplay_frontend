@@ -55,3 +55,34 @@
 .stroke-2 {
   stroke-width: 2.2px;
 }
+
+.link-button {
+  font-size: 1.2rem;
+  text-decoration: none;
+  display: inline-flex;
+  color: #000000;
+  padding: 0;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 4px;
+  min-width: 64px;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  user-select: none;
+  vertical-align: middle;
+  cursor: pointer;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-decoration: none;
+}

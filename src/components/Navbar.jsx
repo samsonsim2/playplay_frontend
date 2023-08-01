@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -26,12 +26,22 @@ function ElevationScroll(props) {
 
 const Navbar = (props) => {
   const navigate = useNavigate();
+  const currentPath = useLocation().pathname;
+
+  const handleNavigation = () => {
+    if (currentPath === "/begin/game-info") {
+      navigate("begin");
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <>
       <ElevationScroll {...props}>
         <AppBar>
           <Toolbar sx={{ backgroundColor: "#FFFFFF" }}>
-            <IconButton onClick={() => navigate("/")}>
+            <IconButton onClick={() => handleNavigation()}>
               <ArrowBackIosIcon sx={{ fontSize: "20px", color: "#000000" }} />
               <p
                 style={{

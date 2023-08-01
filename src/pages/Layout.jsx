@@ -10,6 +10,7 @@ const Layout = () => {
     "/": "Home",
     "/how-to-play": "menu",
     "/begin": "menu",
+    "/begin/game-info": "playstyle",
   };
 
   return (
