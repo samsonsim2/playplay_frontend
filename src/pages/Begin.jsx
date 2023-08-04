@@ -46,13 +46,13 @@ const Begin = () => {
   };
 
   const dataForQuery = {
-    looking: lookingSelect,
-    speaking: speakingSelect,
-    arms: armsSelect,
-    legs: legsSelect,
-    voice: voiceSelect,
-    sensitive: sensitiveSelect,
-    finger: fingerSelect,
+    Looking: lookingSelect,
+    Speaking: speakingSelect,
+    Arms: armsSelect,
+    Legs: legsSelect,
+    "Voice only": voiceSelect,
+    Sensitive: sensitiveSelect,
+    "Finger-play": fingerSelect,
   };
 
   return (
