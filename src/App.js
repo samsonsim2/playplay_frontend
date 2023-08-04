@@ -43,6 +43,11 @@ const theme = createTheme({
         disableRipple: true,
       },
     },
+    MuiAppBar: {
+      styleOverrides: {
+        root: { boxShadow: "none" },
+      },
+    },
   },
 });
 
