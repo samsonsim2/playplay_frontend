@@ -60,11 +60,9 @@ const Begin = () => {
       <p
         style={{
           margin: "0 auto 20px auto",
-          width: "100%",
           textAlign: "center",
-          fontWeight: 700,
-          fontSize: "1.2rem",
         }}
+        className="header-text"
       >
         let's play without:
       </p>
@@ -109,11 +107,9 @@ const Begin = () => {
       <p
         style={{
           margin: "50px auto 20px auto",
-          width: "100%",
           textAlign: "center",
-          fontWeight: 700,
-          fontSize: "1.2rem",
         }}
+        className="header-text"
       >
         special playstyle:
       </p>

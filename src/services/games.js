@@ -1,8 +1,6 @@
 import axios from "axios";
 
 export const getGames = async (data) => {
-  console.log("getGames");
-  console.log(data);
   try {
     const games = await axios({
       method: "GET",
