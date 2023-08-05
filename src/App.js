@@ -1,8 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
-import games from "./utils/Games";
-import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import HowToPlay from "./pages/HowToPlay";
 import Layout from "./pages/Layout";
@@ -47,6 +45,17 @@ const theme = createTheme({
       styleOverrides: {
         root: { boxShadow: "none" },
       },
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      iPhoneSe: 375,
+      iPhone12Pro: 380,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
     },
   },
 });

@@ -1,4 +1,4 @@
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Box } from "@mui/material";
 import { useEffect, useState } from "react";
 import LookingImage from "../assets/Looking";
 import SpeakingImage from "../assets/Speaking";
@@ -92,7 +92,13 @@ const Begin = () => {
       <Grid container spacing={1} justifyContent="space-around">
         <Grid item xs={5}>
           <Grid container direction="column" sx={{ height: "100%" }}>
-            <Grid item style={{ width: "60%", margin: "auto" }}>
+            <Grid
+              item
+              sx={{
+                width: { iPhoneSe: "50%", iPhone12Pro: "60%" },
+                margin: "auto",
+              }}
+            >
               <LookingImage
                 selected={lookingSelect}
                 handleClick={() => handlePlayWithoutClick("lookingSelect")}
@@ -101,7 +107,13 @@ const Begin = () => {
                 looking
               </p>
             </Grid>
-            <Grid item style={{ width: "50%", margin: "auto" }}>
+            <Grid
+              item
+              sx={{
+                width: { iPhoneSe: "40%", iPhone12Pro: "50%" },
+                margin: "auto",
+              }}
+            >
               <SpeakingImage
                 selected={speakingSelect}
                 handleClick={() => handlePlayWithoutClick("speakingSelect")}
@@ -114,13 +126,25 @@ const Begin = () => {
         </Grid>
         <Grid item xs={5}>
           <Grid container direction="column">
-            <Grid item style={{ width: "60%", margin: "auto" }}>
+            <Grid
+              item
+              sx={{
+                width: { iPhoneSe: "50%", iPhone12Pro: "60%" },
+                margin: "auto",
+              }}
+            >
               <ArmsImage
                 selected={armsSelect}
                 handleClick={() => handlePlayWithoutClick("armsSelect")}
               />
             </Grid>
-            <Grid item style={{ width: "38%", margin: "auto" }}>
+            <Grid
+              item
+              sx={{
+                width: { iPhoneSe: "28%", iPhone12Pro: "38%" },
+                margin: "auto",
+              }}
+            >
               <LegsImage
                 selected={legsSelect}
                 handleClick={() => handlePlayWithoutClick("legsSelect")}
@@ -144,10 +168,17 @@ const Begin = () => {
       <Grid container justifyContent="space-around">
         <Grid item xs={3}>
           <div style={{ height: "80px", display: "flex" }}>
-            <VoiceOnlyImage
-              selected={voiceSelect}
-              handleClick={handlePlayStyleClick}
-            />
+            <Box
+              sx={{
+                width: { iPhoneSe: "90%", iPhone12Pro: "100%" },
+                margin: "auto",
+              }}
+            >
+              <VoiceOnlyImage
+                selected={voiceSelect}
+                handleClick={handlePlayStyleClick}
+              />
+            </Box>
           </div>
           <p style={{ width: "100%", textAlign: "center", margin: 0 }}>
             voice only
@@ -161,10 +192,17 @@ const Begin = () => {
               justifyContent: "center",
             }}
           >
-            <SensitiveImage
-              selected={sensitiveSelect}
-              handleClick={handlePlayStyleClick}
-            />
+            <Box
+              sx={{
+                width: { iPhoneSe: "35%", iPhone12Pro: "40%" },
+                margin: "auto",
+              }}
+            >
+              <SensitiveImage
+                selected={sensitiveSelect}
+                handleClick={handlePlayStyleClick}
+              />
+            </Box>
           </div>
           <p style={{ width: "100%", textAlign: "center", margin: 0 }}>
             sensitive
@@ -178,10 +216,17 @@ const Begin = () => {
               justifyContent: "center",
             }}
           >
-            <FingerPlayImage
-              selected={fingerSelect}
-              handleClick={handlePlayStyleClick}
-            />
+            <Box
+              sx={{
+                width: { iPhoneSe: "55%", iPhone12Pro: "65%" },
+                margin: "auto",
+              }}
+            >
+              <FingerPlayImage
+                selected={fingerSelect}
+                handleClick={handlePlayStyleClick}
+              />
+            </Box>
           </div>
           <p style={{ width: "100%", textAlign: "center", margin: 0 }}>
             finger-play
