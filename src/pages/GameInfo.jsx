@@ -14,7 +14,7 @@ import FingerPlayImage from "../assets/FingerPlay";
 
 const GameInfo = (props) => {
   let { state } = useLocation();
-  // console.log("state: ", state);
+  console.log("state: ", state);
 
   const {
     data: games,
@@ -63,7 +63,11 @@ const GameInfo = (props) => {
                     <p className="playstyle-text">playstyle:</p>
                   </Grid>
                   {game.Tags.map((tag, index) => (
-                    <Grid item style={{ width: "8%", marginRight: "1rem" }}>
+                    <Grid
+                      item
+                      style={{ width: "8%", marginRight: "1rem" }}
+                      key={`${tag.tag}-${index}`}
+                    >
                       {imageMap[tag.tag]}
                     </Grid>
                   ))}

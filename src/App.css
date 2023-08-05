@@ -1,3 +1,9 @@
+/* * {
+  outline: 1px solid #f00 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+} */
+
 .App {
   text-align: center;
 }
@@ -45,7 +51,7 @@
 }
 
 .para-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 0;
 }
 

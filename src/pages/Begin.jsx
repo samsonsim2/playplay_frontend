@@ -26,10 +26,32 @@ const Begin = () => {
     setLegsSelect(true);
   };
 
+  const resetSpecialPlayStyle = () => {
+    setVoiceSelect(false);
+    setSensitiveSelect(false);
+    setFingerSelect(false);
+  };
+
+  const playWithoutMap = {
+    lookingSelect: () => setLookingSelect(!lookingSelect),
+    speakingSelect: () => setSpeakingSelect(!speakingSelect),
+    armsSelect: () => setArmsSelect(!armsSelect),
+    legsSelect: () => setLegsSelect(!legsSelect),
+  };
+
+  const handlePlayWithoutClick = (selectType) => {
+    // Reset special play style
+    resetSpecialPlayStyle();
+
+    // Get and run the selected function for let's play without
+    const selectedFunction = playWithoutMap[selectType];
+    selectedFunction();
+  };
+
   const handlePlayStyleClick = (styleClicked) => {
-    if (voiceSelect || sensitiveSelect || fingerSelect) {
-      resetPlayWithout();
-    }
+    // Reset let's play without
+    resetPlayWithout();
+
     if (styleClicked === "voice") {
       setVoiceSelect(!voiceSelect);
       setSensitiveSelect(false);
@@ -73,7 +95,7 @@ const Begin = () => {
             <Grid item style={{ width: "60%", margin: "auto" }}>
               <LookingImage
                 selected={lookingSelect}
-                handleClick={setLookingSelect}
+                handleClick={() => handlePlayWithoutClick("lookingSelect")}
               />
               <p style={{ width: "100%", textAlign: "center", margin: 0 }}>
                 looking
@@ -82,7 +104,7 @@ const Begin = () => {
             <Grid item style={{ width: "50%", margin: "auto" }}>
               <SpeakingImage
                 selected={speakingSelect}
-                handleClick={setSpeakingSelect}
+                handleClick={() => handlePlayWithoutClick("speakingSelect")}
               />
               <p style={{ width: "100%", textAlign: "center", margin: 0 }}>
                 speaking
@@ -93,10 +115,16 @@ const Begin = () => {
         <Grid item xs={5}>
           <Grid container direction="column">
             <Grid item style={{ width: "60%", margin: "auto" }}>
-              <ArmsImage selected={armsSelect} handleClick={setArmsSelect} />
+              <ArmsImage
+                selected={armsSelect}
+                handleClick={() => handlePlayWithoutClick("armsSelect")}
+              />
             </Grid>
             <Grid item style={{ width: "38%", margin: "auto" }}>
-              <LegsImage selected={legsSelect} handleClick={setLegsSelect} />
+              <LegsImage
+                selected={legsSelect}
+                handleClick={() => handlePlayWithoutClick("legsSelect")}
+              />
             </Grid>
             <p style={{ width: "100%", textAlign: "center", margin: 0 }}>
               using arms / legs
