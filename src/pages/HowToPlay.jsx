@@ -1,7 +1,9 @@
+import { Grid } from "@mui/material";
+
 const HowToPlay = () => {
   return (
-    <>
-      <p>
+    <Grid container sx={{ pb: 1, mt: 0 }}>
+      <p style={{ marginTop: 0 }}>
         AD AD Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
         fringilla eros vel aliquet pulvinar. Duis vulputate sed dolor ac semper.
         Donec tempus, ligula at dapibus consequat, ante leo tempus enim, ac
@@ -85,7 +87,7 @@ const HowToPlay = () => {
         id elementum sem. Sed mattis ante erat, vitae vestibulum quam convallis
         at.
       </p>
-    </>
+    </Grid>
   );
 };
 
