@@ -95,7 +95,7 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { iPhoneSe: "50%", iPhone12Pro: "60%" },
+                width: { xs: "40%", iPhoneSe: "50%", iPhone12Pro: "60%" },
                 margin: "auto",
               }}
             >
@@ -110,7 +110,7 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { iPhoneSe: "40%", iPhone12Pro: "50%" },
+                width: { xs: "30%", iPhoneSe: "40%", iPhone12Pro: "50%" },
                 margin: "auto",
               }}
             >
@@ -129,7 +129,7 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { iPhoneSe: "50%", iPhone12Pro: "60%" },
+                width: { xs: "50%", iPhoneSe: "50%", iPhone12Pro: "60%" },
                 margin: "auto",
               }}
             >
@@ -141,7 +141,7 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { iPhoneSe: "28%", iPhone12Pro: "38%" },
+                width: { xs: "30%", iPhoneSe: "28%", iPhone12Pro: "38%" },
                 margin: "auto",
               }}
             >
@@ -170,7 +170,7 @@ const Begin = () => {
           <div style={{ height: "80px", display: "flex" }}>
             <Box
               sx={{
-                width: { iPhoneSe: "90%", iPhone12Pro: "100%" },
+                width: { xs: "80%", iPhoneSe: "90%", iPhone12Pro: "100%" },
                 margin: "auto",
               }}
             >
@@ -194,7 +194,7 @@ const Begin = () => {
           >
             <Box
               sx={{
-                width: { iPhoneSe: "35%", iPhone12Pro: "40%" },
+                width: { xs: "30%", iPhoneSe: "35%", iPhone12Pro: "40%" },
                 margin: "auto",
               }}
             >
@@ -218,7 +218,7 @@ const Begin = () => {
           >
             <Box
               sx={{
-                width: { iPhoneSe: "55%", iPhone12Pro: "65%" },
+                width: { xs: "45%", iPhoneSe: "55%", iPhone12Pro: "65%" },
                 margin: "auto",
               }}
             >
