@@ -50,6 +50,7 @@ const theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
+      xsUp: 200,
       iPhoneSe: 375,
       iPhone12Pro: 380,
       sm: 600,

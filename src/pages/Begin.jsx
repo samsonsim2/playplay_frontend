@@ -1,5 +1,5 @@
 import { Button, Grid, Box } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import LookingImage from "../assets/Looking";
 import SpeakingImage from "../assets/Speaking";
 import ArmsImage from "../assets/Arms";
@@ -18,6 +18,12 @@ const Begin = () => {
   const [voiceSelect, setVoiceSelect] = useState(false);
   const [sensitiveSelect, setSensitiveSelect] = useState(false);
   const [fingerSelect, setFingerSelect] = useState(false);
+
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const windowWidth = windowSize["current"][0];
+  const armsLegMargin = -Math.round(windowWidth * 0.1066);
+
+  console.log("window width:", armsLegMargin);
 
   const resetPlayWithout = () => {
     setLookingSelect(true);
@@ -141,8 +147,15 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { xs: "30%", iPhoneSe: "28%", iPhone12Pro: "38%" },
-                margin: "auto",
+                width: { xs: "29%", iPhoneSe: "27%", iPhone12Pro: "38%" },
+                margin: {
+                  xs: `${armsLegMargin}px auto auto auto`,
+                  iPhoneSe: `${armsLegMargin}px auto auto auto`,
+                  sm: "-63px auto auto auto",
+                  md: "-63px auto auto auto",
+                },
+                position: "relative",
+                zIndex: 10,
               }}
             >
               <LegsImage
