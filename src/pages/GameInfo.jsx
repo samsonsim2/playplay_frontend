@@ -48,7 +48,7 @@ const GameInfo = (props) => {
   return (
     <>
       <Grid container sx={{ pb: 10 }}>
-        {games?.length > 0 &&
+        {games.length > 0 &&
           games.map((game, index) => (
             <Fragment key={`${game.title}-${index}`}>
               <Grid item xs={12} sx={{ mt: index === 0 ? 0 : 3 }}>

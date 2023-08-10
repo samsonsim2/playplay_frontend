@@ -124,7 +124,7 @@ const Begin = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item xs={5}>
+        <Grid item xs={6}>
           <Grid container direction="column">
             <Grid
               item
