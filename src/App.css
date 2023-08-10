@@ -109,3 +109,8 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-text-decoration: none;
 }
+
+.greyBold{
+  color:#636363;
+  font-weight:500;
+}
