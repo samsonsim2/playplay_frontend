@@ -1,5 +1,5 @@
 import { Button, Grid, Box } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import LookingImage from "../assets/Looking";
 import SpeakingImage from "../assets/Speaking";
 import ArmsImage from "../assets/Arms";
@@ -18,6 +18,12 @@ const Begin = () => {
   const [voiceSelect, setVoiceSelect] = useState(false);
   const [sensitiveSelect, setSensitiveSelect] = useState(false);
   const [fingerSelect, setFingerSelect] = useState(false);
+
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  const windowWidth = windowSize["current"][0];
+  const armsLegMargin = -Math.round(windowWidth * 0.1066);
+
+  console.log("window width:", armsLegMargin);
 
   const resetPlayWithout = () => {
     setLookingSelect(true);
@@ -95,7 +101,7 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { iPhoneSe: "50%", iPhone12Pro: "60%" },
+                width: { xs: "40%", iPhoneSe: "50%", iPhone12Pro: "60%" },
                 margin: "auto",
               }}
             >
@@ -110,7 +116,7 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { iPhoneSe: "40%", iPhone12Pro: "50%" },
+                width: { xs: "30%", iPhoneSe: "40%", iPhone12Pro: "50%" },
                 margin: "auto",
               }}
             >
@@ -129,7 +135,7 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { iPhoneSe: "50%", iPhone12Pro: "60%" },
+                width: { xs: "50%", iPhoneSe: "50%", iPhone12Pro: "60%" },
                 margin: "auto",
               }}
             >
@@ -141,8 +147,15 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { iPhoneSe: "28%", iPhone12Pro: "38%" },
-                margin: "auto",
+                width: { xs: "29%", iPhoneSe: "27%", iPhone12Pro: "38%" },
+                margin: {
+                  xs: `${armsLegMargin}px auto auto auto`,
+                  iPhoneSe: `${armsLegMargin}px auto auto auto`,
+                  sm: "-63px auto auto auto",
+                  md: "-63px auto auto auto",
+                },
+                position: "relative",
+                zIndex: 10,
               }}
             >
               <LegsImage
@@ -170,7 +183,7 @@ const Begin = () => {
           <div style={{ height: "80px", display: "flex" }}>
             <Box
               sx={{
-                width: { iPhoneSe: "90%", iPhone12Pro: "100%" },
+                width: { xs: "80%", iPhoneSe: "90%", iPhone12Pro: "100%" },
                 margin: "auto",
               }}
             >
@@ -194,7 +207,7 @@ const Begin = () => {
           >
             <Box
               sx={{
-                width: { iPhoneSe: "35%", iPhone12Pro: "40%" },
+                width: { xs: "30%", iPhoneSe: "35%", iPhone12Pro: "40%" },
                 margin: "auto",
               }}
             >
@@ -218,7 +231,7 @@ const Begin = () => {
           >
             <Box
               sx={{
-                width: { iPhoneSe: "55%", iPhone12Pro: "65%" },
+                width: { xs: "45%", iPhoneSe: "55%", iPhone12Pro: "65%" },
                 margin: "auto",
               }}
             >
