@@ -109,7 +109,10 @@ const Begin = () => {
                 selected={lookingSelect}
                 handleClick={() => handlePlayWithoutClick("lookingSelect")}
               />
-              <p class="greyBold"  style={{ width: "100%", textAlign: "center", margin: 0  }}>
+              <p
+                className="greyBold"
+                style={{ width: "100%", textAlign: "center", margin: 0 }}
+              >
                 looking
               </p>
             </Grid>
@@ -124,7 +127,10 @@ const Begin = () => {
                 selected={speakingSelect}
                 handleClick={() => handlePlayWithoutClick("speakingSelect")}
               />
-              <p class="greyBold"  style={{ width: "100%", textAlign: "center", margin: 0  }}>
+              <p
+                className="greyBold"
+                style={{ width: "100%", textAlign: "center", margin: 0 }}
+              >
                 speaking
               </p>
             </Grid>
@@ -163,7 +169,10 @@ const Begin = () => {
                 handleClick={() => handlePlayWithoutClick("legsSelect")}
               />
             </Grid>
-            <p class="greyBold"  style={{ width: "100%", textAlign: "center", margin: 0  }}>
+            <p
+              className="greyBold"
+              style={{ width: "100%", textAlign: "center", margin: 0 }}
+            >
               using arms / legs
             </p>
           </Grid>
@@ -193,7 +202,10 @@ const Begin = () => {
               />
             </Box>
           </div>
-          <p class="greyBold" style={{ width: "100%", textAlign: "center", margin: 0  }}>
+          <p
+            className="greyBold"
+            style={{ width: "100%", textAlign: "center", margin: 0 }}
+          >
             voice only
           </p>
         </Grid>
@@ -217,7 +229,10 @@ const Begin = () => {
               />
             </Box>
           </div>
-          <p class="greyBold"  style={{ width: "100%", textAlign: "center", margin: 0 }}>
+          <p
+            className="greyBold"
+            style={{ width: "100%", textAlign: "center", margin: 0 }}
+          >
             sensitive
           </p>
         </Grid>
@@ -241,7 +256,10 @@ const Begin = () => {
               />
             </Box>
           </div>
-          <p class="greyBold"  style={{ width: "100%", textAlign: "center", margin: 0 }}>
+          <p
+            className="greyBold"
+            style={{ width: "100%", textAlign: "center", margin: 0 }}
+          >
             finger-play
           </p>
         </Grid>

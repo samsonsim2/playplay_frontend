@@ -1,10 +1,15 @@
 import axios from "axios";
 
 export const getGames = async (data) => {
+  const url =
+    process.env.REACT_APP_ENV === "development"
+      ? process.env.REACT_APP_DB_DEV_SERVER
+      : process.env.REACT_APP_DB_SERVER;
+
   try {
     const games = await axios({
       method: "GET",
-      url: `${process.env.REACT_APP_DB_SERVER}/games`,
+      url: `${url}/games`,
       headers: {
         "content-type": "application/json",
       },
