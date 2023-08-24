@@ -22,9 +22,9 @@ const Begin = () => {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
   const windowWidth = windowSize["current"][0];
   const armsLegMargin = -Math.round(windowWidth * 0.16);
-  const armsLegMarginWide = -Math.round(windowWidth * 0.239);
+  const armsLegMarginWide = -Math.round(windowWidth * 0.136);
 
-  console.log("window width:", armsLegMargin);
+  console.log("window width:", windowWidth);
 
   const resetPlayWithout = () => {
     setLookingSelect(true);
@@ -166,12 +166,14 @@ const Begin = () => {
                 },
                 margin: {
                   xs: `-20px auto auto auto`,
-                  xsUp: `-25px auto auto auto`,
+                  xsUp: `-28px auto auto auto`,
                   fold: `-34px auto auto auto`,
-                  iPhoneSe: `${armsLegMargin}px auto auto auto`,
+                  iPhoneSe: `-40px auto auto auto`,
+                  // iPhoneSe: `${armsLegMargin}px auto auto auto`,
                   iPhone12Pro: "-50px auto auto auto",
                   smUp2: `-60px auto auto auto`,
-                  smUp: `${armsLegMarginWide}px auto auto auto`,
+                  smUp: `-70px auto auto auto`,
+                  // smUp: `${armsLegMarginWide}px auto auto auto`,
                 },
                 position: "relative",
                 zIndex: 10,
