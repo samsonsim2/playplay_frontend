@@ -8,7 +8,7 @@ const SensitiveImage = ({ selected, handleClick }) => {
       onClick={() => handleClick("sensitive")}
       style={{ maxHeight: "90%" }}
       className={
-        selected ? "parts-stroke stroke-2 deselected" : "parts-stroke stroke-2"
+        selected ? "parts-stroke stroke-1 deselected" : "parts-stroke stroke-1"
       }
     >
       <polyline

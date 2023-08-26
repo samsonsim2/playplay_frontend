@@ -7,7 +7,7 @@ const SpeakingImage = ({ selected, handleClick }) => {
       viewBox="0 0 78.89 111.21"
       onClick={() => handleClick(!selected)}
       className={
-        selected ? "parts-stroke stroke-2" : "parts-stroke stroke-2 deselected"
+        selected ? "parts-stroke stroke-1" : "parts-stroke stroke-1 deselected"
       }
     >
       <path
