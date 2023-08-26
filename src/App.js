@@ -51,8 +51,11 @@ const theme = createTheme({
     values: {
       xs: 0,
       xsUp: 200,
+      fold: 280,
       iPhoneSe: 375,
       iPhone12Pro: 380,
+      smUp2: 450,
+      smUp: 500,
       sm: 600,
       md: 900,
       lg: 1200,

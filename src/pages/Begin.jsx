@@ -1,4 +1,4 @@
-import { Button, Grid, Box } from "@mui/material";
+import { Button, Grid, Box, Typography } from "@mui/material";
 import { useEffect, useState, useRef } from "react";
 import LookingImage from "../assets/Looking";
 import SpeakingImage from "../assets/Speaking";
@@ -21,9 +21,10 @@ const Begin = () => {
 
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
   const windowWidth = windowSize["current"][0];
-  const armsLegMargin = -Math.round(windowWidth * 0.1066);
+  const armsLegMargin = -Math.round(windowWidth * 0.16);
+  const armsLegMarginWide = -Math.round(windowWidth * 0.136);
 
-  console.log("window width:", armsLegMargin);
+  console.log("window width:", windowWidth);
 
   const resetPlayWithout = () => {
     setLookingSelect(true);
@@ -95,7 +96,12 @@ const Begin = () => {
         let's play without:
       </p>
 
-      <Grid container spacing={1} justifyContent="space-around">
+      <Grid
+        container
+        spacing={0.2}
+        justifyContent="center"
+        // style={{ width: "100%", margin: "auto" }}
+      >
         <Grid item xs={5}>
           <Grid container direction="column" sx={{ height: "100%" }}>
             <Grid
@@ -153,12 +159,21 @@ const Begin = () => {
             <Grid
               item
               sx={{
-                width: { xs: "29%", iPhoneSe: "27%", iPhone12Pro: "38%" },
+                width: {
+                  xs: "29%",
+                  iPhoneSe: "27%",
+                  iPhone12Pro: "34%",
+                },
                 margin: {
-                  xs: `${armsLegMargin}px auto auto auto`,
-                  iPhoneSe: `${armsLegMargin}px auto auto auto`,
-                  sm: "-63px auto auto auto",
-                  md: "-63px auto auto auto",
+                  xs: `-20px auto auto auto`,
+                  xsUp: `-28px auto auto auto`,
+                  fold: `-34px auto auto auto`,
+                  iPhoneSe: `-40px auto auto auto`,
+                  // iPhoneSe: `${armsLegMargin}px auto auto auto`,
+                  iPhone12Pro: "-50px auto auto auto",
+                  smUp2: `-60px auto auto auto`,
+                  smUp: `-70px auto auto auto`,
+                  // smUp: `${armsLegMarginWide}px auto auto auto`,
                 },
                 position: "relative",
                 zIndex: 10,
@@ -188,90 +203,201 @@ const Begin = () => {
         special playstyle:
       </p>
       <Grid container justifyContent="space-around">
-        <Grid item xs={3}>
-          <div style={{ height: "80px", display: "flex" }}>
-            <Box
-              sx={{
-                width: { xs: "80%", iPhoneSe: "90%", iPhone12Pro: "100%" },
-                margin: "auto",
-              }}
-            >
-              <VoiceOnlyImage
-                selected={voiceSelect}
-                handleClick={handlePlayStyleClick}
-              />
-            </Box>
-          </div>
-          <p
-            className="greyBold"
-            style={{ width: "100%", textAlign: "center", margin: 0 }}
+        <Grid item xs={12} fold={3} sx={{ mb: { xs: "20px", fold: "0" } }}>
+          <Grid
+            container
+            // style={{ height: "120px" }}
+            justifyContent="center"
           >
-            voice only
-          </p>
+            <Grid item xs={12}>
+              <Grid
+                container
+                sx={{
+                  height: {
+                    xs: "auto",
+                    fold: "50px",
+                    iPhoneSe: "80px",
+                    smUp2: "100px",
+                    smUp: "120px;",
+                  },
+                  margin: "auto",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: {
+                      xs: "35%",
+                      fold: "80%",
+                      iPhoneSe: "90%",
+                      iPhone12Pro: "100%",
+                    },
+                    margin: "auto",
+                  }}
+                >
+                  <VoiceOnlyImage
+                    selected={voiceSelect}
+                    handleClick={handlePlayStyleClick}
+                  />
+                </Box>
+              </Grid>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                sx={{
+                  width: "100%",
+                  textAlign: "center",
+                  margin: 0,
+                  fontWeight: 700,
+                  color: "#636363",
+                  fontSize: {
+                    xs: "0.75rem",
+                    iPhoneSe: "1rem",
+                  },
+                }}
+              >
+                voice only
+              </Typography>
+              {/* <p
+                className="greyBold"
+                style={{ width: "100%", textAlign: "center", margin: 0 }}
+              >
+                voice only
+              </p> */}
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs={3}>
-          <div
-            style={{
-              height: "80px",
-              display: "flex",
-              justifyContent: "center",
-            }}
+        <Grid item xs={12} fold={3} sx={{ mb: { xs: "20px", fold: "0" } }}>
+          <Grid
+            container
+            // style={{ height: "120px" }}
+            justifyContent="space-between"
           >
-            <Box
-              sx={{
-                width: { xs: "30%", iPhoneSe: "35%", iPhone12Pro: "40%" },
-                margin: "auto",
-              }}
-            >
-              <SensitiveImage
-                selected={sensitiveSelect}
-                handleClick={handlePlayStyleClick}
-              />
-            </Box>
-          </div>
-          <p
-            className="greyBold"
-            style={{ width: "100%", textAlign: "center", margin: 0 }}
-          >
-            sensitive
-          </p>
+            <Grid item xs={12}>
+              <Grid
+                container
+                sx={{
+                  height: {
+                    xs: "auto",
+                    fold: "50px",
+                    iPhoneSe: "80px",
+                    smUp2: "100px",
+                    smUp: "120px;",
+                  },
+                  margin: "auto",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: {
+                      xs: "15%",
+                      fold: "30%",
+                      iPhoneSe: "35%",
+                      xl: "40%",
+                    },
+                    margin: "auto",
+                  }}
+                >
+                  <SensitiveImage
+                    selected={sensitiveSelect}
+                    handleClick={handlePlayStyleClick}
+                  />
+                </Box>
+              </Grid>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                sx={{
+                  width: "100%",
+                  textAlign: "center",
+                  margin: 0,
+                  fontWeight: 700,
+                  color: "#636363",
+                  fontSize: {
+                    xs: "0.75rem",
+                    iPhoneSe: "1rem",
+                  },
+                }}
+              >
+                sensitive
+              </Typography>
+              {/* <p
+                className="greyBold"
+                style={{ width: "100%", textAlign: "center", margin: 0 }}
+              >
+                sensitive
+              </p> */}
+            </Grid>
+          </Grid>
         </Grid>
-        <Grid item xs={3}>
-          <div
-            style={{
-              height: "80px",
-              display: "flex",
-              justifyContent: "center",
-            }}
+        <Grid item xs={12} fold={3}>
+          <Grid
+            container
+            // style={{ height: "120px" }}
+            justifyContent="space-between"
           >
-            <Box
-              sx={{
-                width: { xs: "45%", iPhoneSe: "55%", iPhone12Pro: "65%" },
-                margin: "auto",
-              }}
-            >
-              <FingerPlayImage
-                selected={fingerSelect}
-                handleClick={handlePlayStyleClick}
-              />
-            </Box>
-          </div>
-          <p
-            className="greyBold"
-            style={{ width: "100%", textAlign: "center", margin: 0 }}
-          >
-            finger-play
-          </p>
+            <Grid item xs={12}>
+              <Grid
+                container
+                sx={{
+                  height: {
+                    xs: "auto",
+                    fold: "50px",
+                    iPhoneSe: "80px",
+                    smUp2: "100px",
+                    smUp: "120px;",
+                  },
+                  margin: "auto",
+                }}
+              >
+                <Box
+                  sx={{
+                    width: {
+                      xs: "23%",
+                      fold: "45%",
+                      iPhoneSe: "55%",
+                      iPhone12Pro: "65%",
+                    },
+                    margin: "auto",
+                  }}
+                >
+                  <FingerPlayImage
+                    selected={fingerSelect}
+                    handleClick={handlePlayStyleClick}
+                  />
+                </Box>
+              </Grid>
+            </Grid>
+            <Grid item xs={12}>
+              <Typography
+                sx={{
+                  width: "100%",
+                  textAlign: "center",
+                  margin: 0,
+                  fontWeight: 700,
+                  color: "#636363",
+                  fontSize: {
+                    xs: "0.75rem",
+                    iPhoneSe: "1rem",
+                  },
+                }}
+              >
+                finger-play
+              </Typography>
+              {/* <p
+                className="greyBold"
+                style={{ width: "100%", textAlign: "center", margin: 0 }}
+              >
+                finger-play
+              </p> */}
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
-      <Link
-        to="game-info"
-        state={dataForQuery}
-        className="link-button"
-        style={{ marginTop: "40px" }}
-      >
-        Play-Play!
-      </Link>
+      <Box sx={{ mt: { xs: "40px", smUp2: "70px" } }}>
+        <Link to="game-info" state={dataForQuery} className="link-button">
+          Play-Play!
+        </Link>
+      </Box>
     </>
   );
 };
