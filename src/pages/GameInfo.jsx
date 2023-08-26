@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getGames } from "../services/games";
 import { Grid } from "@mui/material";
+import Loading from "../components/Loading";
 
 import LookingImage from "../assets/Looking";
 import SpeakingImage from "../assets/Speaking";
@@ -52,7 +53,7 @@ const GameInfo = (props) => {
   };
 
   if (isGamesLoading) {
-    return <p>Loading</p>;
+    return <Loading />;
   }
 
   return (
