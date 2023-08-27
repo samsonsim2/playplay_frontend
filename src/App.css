@@ -72,11 +72,13 @@
 }
 
 .stroke-1 {
-  stroke-width: 1.95px;
+  stroke-width: 2.8px;
+  /* stroke-width: 1.95px; */
 }
 
 .stroke-2 {
-  stroke-width: 2.2px;
+  stroke-width: 1.8px;
+  /* stroke-width: 2.2px; */
 }
 
 .link-button {

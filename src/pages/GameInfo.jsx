@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import { useQuery } from "react-query";
 import { getGames } from "../services/games";
 import { Grid } from "@mui/material";
+import Loading from "../components/Loading";
 
 import LookingImage from "../assets/Looking";
 import SpeakingImage from "../assets/Speaking";
@@ -41,8 +42,18 @@ const GameInfo = (props) => {
     "Finger-play": <FingerPlayImage selected={false} />,
   };
 
+  const widthMap = {
+    1: { xs: "18%", xsUp: "15%", fold: "12%" },
+    2: { xs: "15%", xsUp: "12%", fold: "8%" },
+    3: { xs: "15%", xsUp: "12%", fold: "8%" },
+    4: { xs: "12%", xsUp: "10%", fold: "6%" },
+    5: { xs: "15%", xsUp: "15%", fold: "10%" },
+    6: { xs: "11%", xsUp: "9%", fold: "5%" },
+    7: { xs: "15%", xsUp: "12%", fold: "8%" },
+  };
+
   if (isGamesLoading) {
-    return <p>Loading</p>;
+    return <Loading />;
   }
 
   return (
@@ -65,7 +76,7 @@ const GameInfo = (props) => {
                   {game.Tags.map((tag, index) => (
                     <Grid
                       item
-                      style={{ width: "8%", marginRight: "1rem" }}
+                      sx={{ width: widthMap[tag.id], marginRight: "1rem" }}
                       key={`${tag.tag}-${index}`}
                     >
                       {imageMap[tag.tag]}
