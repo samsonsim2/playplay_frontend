@@ -87,6 +87,10 @@
   stroke-width: 3.5px;
 }
 
+.stroke-5 {
+  stroke-width: 1.4px;
+}
+
 .link-button {
   font-size: 1.2rem;
   text-decoration: none;
