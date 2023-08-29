@@ -35,107 +35,84 @@ const GameInfo = (props) => {
   const imageMap = {
     Looking: (
       <img
-        src="assets/Pngs/looking.png"
-        alt="main logo"
+        src="/assets/Pngs/looking.png"
+        alt="eye"
         style={{
           width: "100%",
-          height: "100%",
-          padding: 0,
-          margin: 0,
         }}
       />
     ),
     Speaking: (
       <img
-        src="assets/Pngs/speaking.png"
-        alt="main logo"
+        src="/assets/Pngs/speaking.png"
+        alt="mouth"
         style={{
           width: "100%",
-          height: "100%",
-          padding: 0,
-          margin: 0,
         }}
       />
     ),
     Arms: (
       <img
-        src="assets/Pngs/arms.png"
-        alt="main logo"
+        src="/assets/Pngs/arms.png"
+        alt="arms"
         style={{
           width: "100%",
-          height: "100%",
-          padding: 0,
-          margin: 0,
         }}
       />
     ),
     Legs: (
       <img
-        src="assets/Pngs/legs.png"
-        alt="main logo"
+        src="/assets/Pngs/legs.png"
+        alt="legs"
         style={{
           width: "100%",
-          height: "100%",
-          padding: 0,
-          margin: 0,
         }}
       />
     ),
     "Voice only": (
       <img
-        src="assets/Pngs/voice-only.png"
+        src="/assets/Pngs/voice-only.png"
         alt="main logo"
         style={{
           width: "100%",
-          height: "100%",
-          padding: 0,
-          margin: 0,
         }}
       />
     ),
     Sensitive: (
       <img
-        src="assets/Pngs/sensitive.png"
-        alt="main logo"
+        src="/assets/Pngs/sensitive.png"
+        alt="sensitive"
         style={{
           width: "100%",
-          height: "100%",
-          padding: 0,
-          margin: 0,
         }}
       />
     ),
     "Finger-play": (
       <img
-        src="assets/Pngs/finger-play.png"
-        alt="main logo"
+        src="/assets/Pngs/finger-play.png"
+        alt="finger"
         style={{
           width: "100%",
-          height: "100%",
-          padding: 0,
-          margin: 0,
         }}
       />
     ),
   };
-  // const imageMap = {
-  //   Looking: <LookingImage selected={true} />,
-  //   Speaking: <SpeakingImage selected={true} />,
-  //   Arms: <ArmsImage selected={true} />,
-  //   Legs: <LegsImage selected={true} />,
-  //   "Voice only": <VoiceOnlyImage selected={false} />,
-  //   Sensitive: <SensitiveImage selected={false} />,
-  //   "Finger-play": <FingerPlayImage selected={false} />,
-  // };
 
   const widthMap = {
-    1: { xs: "18%", xsUp: "15%", fold: "12%" },
-    2: { xs: "15%", xsUp: "12%", fold: "8%" },
-    3: { xs: "15%", xsUp: "12%", fold: "8%" },
-    4: { xs: "12%", xsUp: "10%", fold: "6%" },
-    5: { xs: "15%", xsUp: "15%", fold: "10%" },
-    6: { xs: "11%", xsUp: "9%", fold: "5%" },
-    7: { xs: "15%", xsUp: "12%", fold: "8%" },
+    1: { xs: "18%", fold: "15%", smUp: "12%" },
+    2: { xs: "15%", fold: "12%", smUp: "9%" },
+    3: { xs: "15%", fold: "12%", smUp: "9%" },
+    4: { xs: "12%", fold: "10%", smUp: "7%" },
+    5: { xs: "15%", fold: "12%", smUp: "9%" },
+    6: { xs: "15%", fold: "12%", smUp: "9%" },
+    7: { xs: "15%", fold: "12%", smUp: "9%" },
+    // 1: { xs: "18%", xsUp: "15%", fold: "10%" },
+    // 2: { xs: "15%", xsUp: "12%", fold: "8%" },
+    // 3: { xs: "15%", xsUp: "12%", fold: "8%" },
+    // 4: { xs: "12%", xsUp: "10%", fold: "6%" },
+    // 5: { xs: "15%", xsUp: "15%", fold: "10%" },
+    // 6: { xs: "11%", xsUp: "15%", fold: "9%" },
+    // 7: { xs: "15%", xsUp: "12%", fold: "8%" },
   };
 
   if (isGamesLoading) {
@@ -162,6 +139,8 @@ const GameInfo = (props) => {
                   {game.Tags.map((tag, index) => (
                     <Grid
                       item
+                      // xs={1}
+                      // sx={{ marginRight: "1rem" }}
                       sx={{ width: widthMap[tag.id], marginRight: "1rem" }}
                       key={`${tag.tag}-${index}`}
                     >
