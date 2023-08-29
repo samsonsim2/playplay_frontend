@@ -91,6 +91,10 @@
   stroke-width: 1.4px;
 }
 
+.stroke-6 {
+  stroke-width: 4px;
+}
+
 .link-button {
   font-size: 1.2rem;
   text-decoration: none;

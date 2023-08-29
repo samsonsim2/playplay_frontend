@@ -130,12 +130,6 @@ const Begin = () => {
               >
                 looking
               </Typography>
-              {/* <p
-                className="greyBold"
-                style={{ width: "100%", textAlign: "center", margin: 0 }}
-              >
-                looking
-              </p> */}
             </Grid>
             <Grid
               item
@@ -163,12 +157,6 @@ const Begin = () => {
               >
                 speaking
               </Typography>
-              {/* <p
-                className="greyBold"
-                style={{ width: "100%", textAlign: "center", margin: 0 }}
-              >
-                speaking
-              </p> */}
             </Grid>
           </Grid>
         </Grid>
@@ -227,12 +215,6 @@ const Begin = () => {
             >
               using arms / legs
             </Typography>
-            {/* <p
-              className="greyBold"
-              style={{ width: "100%", textAlign: "center", margin: 0 }}
-            >
-              using arms / legs
-            </p> */}
           </Grid>
         </Grid>
       </Grid>
@@ -322,10 +304,10 @@ const Begin = () => {
                 <Box
                   sx={{
                     width: {
-                      xs: "15%",
-                      fold: "30%",
-                      iPhoneSe: "35%",
-                      xl: "40%",
+                      xs: "26%",
+                      fold: "57%",
+                      iPhoneSe: "63%",
+                      xl: "70%",
                     },
                     margin: "auto",
                   }}
@@ -406,12 +388,6 @@ const Begin = () => {
               >
                 finger-play
               </Typography>
-              {/* <p
-                className="greyBold"
-                style={{ width: "100%", textAlign: "center", margin: 0 }}
-              >
-                finger-play
-              </p> */}
             </Grid>
           </Grid>
         </Grid>
