@@ -33,14 +33,100 @@ const GameInfo = (props) => {
   console.log(games);
 
   const imageMap = {
-    Looking: <LookingImage selected={true} />,
-    Speaking: <SpeakingImage selected={true} />,
-    Arms: <ArmsImage selected={true} />,
-    Legs: <LegsImage selected={true} />,
-    "Voice only": <VoiceOnlyImage selected={false} />,
-    Sensitive: <SensitiveImage selected={false} />,
-    "Finger-play": <FingerPlayImage selected={false} />,
+    Looking: (
+      <img
+        src="assets/Pngs/looking.png"
+        alt="main logo"
+        style={{
+          width: "100%",
+          height: "100%",
+          padding: 0,
+          margin: 0,
+        }}
+      />
+    ),
+    Speaking: (
+      <img
+        src="assets/Pngs/speaking.png"
+        alt="main logo"
+        style={{
+          width: "100%",
+          height: "100%",
+          padding: 0,
+          margin: 0,
+        }}
+      />
+    ),
+    Arms: (
+      <img
+        src="assets/Pngs/arms.png"
+        alt="main logo"
+        style={{
+          width: "100%",
+          height: "100%",
+          padding: 0,
+          margin: 0,
+        }}
+      />
+    ),
+    Legs: (
+      <img
+        src="assets/Pngs/legs.png"
+        alt="main logo"
+        style={{
+          width: "100%",
+          height: "100%",
+          padding: 0,
+          margin: 0,
+        }}
+      />
+    ),
+    "Voice only": (
+      <img
+        src="assets/Pngs/voice-only.png"
+        alt="main logo"
+        style={{
+          width: "100%",
+          height: "100%",
+          padding: 0,
+          margin: 0,
+        }}
+      />
+    ),
+    Sensitive: (
+      <img
+        src="assets/Pngs/sensitive.png"
+        alt="main logo"
+        style={{
+          width: "100%",
+          height: "100%",
+          padding: 0,
+          margin: 0,
+        }}
+      />
+    ),
+    "Finger-play": (
+      <img
+        src="assets/Pngs/finger-play.png"
+        alt="main logo"
+        style={{
+          width: "100%",
+          height: "100%",
+          padding: 0,
+          margin: 0,
+        }}
+      />
+    ),
   };
+  // const imageMap = {
+  //   Looking: <LookingImage selected={true} />,
+  //   Speaking: <SpeakingImage selected={true} />,
+  //   Arms: <ArmsImage selected={true} />,
+  //   Legs: <LegsImage selected={true} />,
+  //   "Voice only": <VoiceOnlyImage selected={false} />,
+  //   Sensitive: <SensitiveImage selected={false} />,
+  //   "Finger-play": <FingerPlayImage selected={false} />,
+  // };
 
   const widthMap = {
     1: { xs: "18%", xsUp: "15%", fold: "12%" },
