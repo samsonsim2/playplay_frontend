@@ -1,0 +1,8 @@
+{
+  "headers": [
+    {
+      "source": "/assets/Pngs/(.*)\\.png",
+      "headers": [{ "key": "Content-Type", "value": "image/png" }]
+    }
+  ]
+}
