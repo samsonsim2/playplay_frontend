@@ -4,11 +4,12 @@ const VoiceOnlyImage = ({ selected, handleClick }) => {
       id="Layer_1"
       data-name="Layer 1"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 104.62 111.21"
+      viewBox="0 15 104.62 80"
       onClick={() => handleClick("voice")}
       className={
-        selected ? "parts-stroke stroke-1 deselected" : "parts-stroke stroke-1"
+        selected ? "parts-stroke stroke-7 deselected" : "parts-stroke stroke-7"
       }
+      style={{ width: "100%", height: "100%" }}
     >
       <path
         onClick={() => handleClick("voice")}

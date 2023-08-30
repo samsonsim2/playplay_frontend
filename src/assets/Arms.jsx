@@ -7,7 +7,7 @@ const ArmsImage = ({ selected, handleClick }) => {
       viewBox="0 0 71.24 111.21"
       onClick={() => handleClick(!selected)}
       className={
-        selected ? "parts-stroke stroke-2" : "parts-stroke stroke-2 deselected"
+        selected ? "parts-stroke stroke-5" : "parts-stroke stroke-5 deselected"
       }
     >
       <path

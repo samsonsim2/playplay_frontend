@@ -33,23 +33,86 @@ const GameInfo = (props) => {
   console.log(games);
 
   const imageMap = {
-    Looking: <LookingImage selected={true} />,
-    Speaking: <SpeakingImage selected={true} />,
-    Arms: <ArmsImage selected={true} />,
-    Legs: <LegsImage selected={true} />,
-    "Voice only": <VoiceOnlyImage selected={false} />,
-    Sensitive: <SensitiveImage selected={false} />,
-    "Finger-play": <FingerPlayImage selected={false} />,
+    Looking: (
+      <img
+        src="/assets/Pngs/looking.png"
+        alt="eye"
+        style={{
+          width: "100%",
+        }}
+      />
+    ),
+    Speaking: (
+      <img
+        src="/assets/Pngs/speaking.png"
+        alt="mouth"
+        style={{
+          width: "100%",
+        }}
+      />
+    ),
+    Arms: (
+      <img
+        src="/assets/Pngs/arms.png"
+        alt="arms"
+        style={{
+          width: "100%",
+        }}
+      />
+    ),
+    Legs: (
+      <img
+        src="/assets/Pngs/legs.png"
+        alt="legs"
+        style={{
+          width: "100%",
+        }}
+      />
+    ),
+    "Voice only": (
+      <img
+        src="/assets/Pngs/voice-only.png"
+        alt="main logo"
+        style={{
+          width: "100%",
+        }}
+      />
+    ),
+    Sensitive: (
+      <img
+        src="/assets/Pngs/sensitive.png"
+        alt="sensitive"
+        style={{
+          width: "100%",
+        }}
+      />
+    ),
+    "Finger-play": (
+      <img
+        src="/assets/Pngs/finger-play.png"
+        alt="finger"
+        style={{
+          width: "100%",
+        }}
+      />
+    ),
   };
 
   const widthMap = {
-    1: { xs: "18%", xsUp: "15%", fold: "12%" },
-    2: { xs: "15%", xsUp: "12%", fold: "8%" },
-    3: { xs: "15%", xsUp: "12%", fold: "8%" },
-    4: { xs: "12%", xsUp: "10%", fold: "6%" },
-    5: { xs: "15%", xsUp: "15%", fold: "10%" },
-    6: { xs: "11%", xsUp: "9%", fold: "5%" },
-    7: { xs: "15%", xsUp: "12%", fold: "8%" },
+    1: { xs: "18%", fold: "15%", smUp: "12%" },
+    2: { xs: "15%", fold: "12%", smUp: "9%" },
+    3: { xs: "15%", fold: "12%", smUp: "9%" },
+    4: { xs: "12%", fold: "10%", smUp: "7%" },
+    5: { xs: "15%", fold: "12%", smUp: "9%" },
+    6: { xs: "15%", fold: "12%", smUp: "9%" },
+    7: { xs: "15%", fold: "12%", smUp: "9%" },
+    // 1: { xs: "18%", xsUp: "15%", fold: "10%" },
+    // 2: { xs: "15%", xsUp: "12%", fold: "8%" },
+    // 3: { xs: "15%", xsUp: "12%", fold: "8%" },
+    // 4: { xs: "12%", xsUp: "10%", fold: "6%" },
+    // 5: { xs: "15%", xsUp: "15%", fold: "10%" },
+    // 6: { xs: "11%", xsUp: "15%", fold: "9%" },
+    // 7: { xs: "15%", xsUp: "12%", fold: "8%" },
   };
 
   if (isGamesLoading) {
@@ -76,6 +139,8 @@ const GameInfo = (props) => {
                   {game.Tags.map((tag, index) => (
                     <Grid
                       item
+                      // xs={1}
+                      // sx={{ marginRight: "1rem" }}
                       sx={{ width: widthMap[tag.id], marginRight: "1rem" }}
                       key={`${tag.tag}-${index}`}
                     >

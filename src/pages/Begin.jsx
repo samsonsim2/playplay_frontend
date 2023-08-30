@@ -130,12 +130,6 @@ const Begin = () => {
               >
                 looking
               </Typography>
-              {/* <p
-                className="greyBold"
-                style={{ width: "100%", textAlign: "center", margin: 0 }}
-              >
-                looking
-              </p> */}
             </Grid>
             <Grid
               item
@@ -163,12 +157,6 @@ const Begin = () => {
               >
                 speaking
               </Typography>
-              {/* <p
-                className="greyBold"
-                style={{ width: "100%", textAlign: "center", margin: 0 }}
-              >
-                speaking
-              </p> */}
             </Grid>
           </Grid>
         </Grid>
@@ -197,11 +185,11 @@ const Begin = () => {
                 margin: {
                   xs: `-20px auto auto auto`,
                   xsUp: `-28px auto auto auto`,
-                  fold: `-34px auto auto auto`,
-                  iPhoneSe: `-40px auto auto auto`,
+                  fold: `-39px auto auto auto`,
+                  iPhoneSe: `-50px auto auto auto`,
                   iPhone12Pro: "-60px auto auto auto",
-                  smUp2: `-60px auto auto auto`,
-                  smUp: `-70px auto auto auto`,
+                  smUp2: `-70px auto auto auto`,
+                  smUp: `-80px auto auto auto`,
                 },
                 position: "relative",
                 zIndex: 10,
@@ -227,12 +215,6 @@ const Begin = () => {
             >
               using arms / legs
             </Typography>
-            {/* <p
-              className="greyBold"
-              style={{ width: "100%", textAlign: "center", margin: 0 }}
-            >
-              using arms / legs
-            </p> */}
           </Grid>
         </Grid>
       </Grid>
@@ -247,14 +229,11 @@ const Begin = () => {
       </p>
       <Grid container justifyContent="space-around">
         <Grid item xs={12} fold={3} sx={{ mb: { xs: "20px", fold: "0" } }}>
-          <Grid
-            container
-            // style={{ height: "120px" }}
-            justifyContent="center"
-          >
+          <Grid container justifyContent="center">
             <Grid item xs={12}>
               <Grid
                 container
+                justifyContent="center"
                 sx={{
                   height: {
                     xs: "auto",
@@ -264,17 +243,18 @@ const Begin = () => {
                     smUp: "120px;",
                   },
                   margin: "auto",
+                  width: "100%",
                 }}
               >
                 <Box
                   sx={{
                     width: {
-                      xs: "35%",
-                      fold: "80%",
+                      xs: "33%",
+                      fold: "70%",
                       iPhoneSe: "90%",
-                      iPhone12Pro: "100%",
+                      iPhone12Pro: "90%",
                     },
-                    margin: "auto",
+                    maxHeight: "100%",
                   }}
                 >
                   <VoiceOnlyImage
@@ -322,10 +302,10 @@ const Begin = () => {
                 <Box
                   sx={{
                     width: {
-                      xs: "15%",
-                      fold: "30%",
-                      iPhoneSe: "35%",
-                      xl: "40%",
+                      xs: "26%",
+                      fold: "50%",
+                      iPhoneSe: "63%",
+                      xl: "70%",
                     },
                     margin: "auto",
                   }}
@@ -406,12 +386,6 @@ const Begin = () => {
               >
                 finger-play
               </Typography>
-              {/* <p
-                className="greyBold"
-                style={{ width: "100%", textAlign: "center", margin: 0 }}
-              >
-                finger-play
-              </p> */}
             </Grid>
           </Grid>
         </Grid>
