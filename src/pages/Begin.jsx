@@ -237,6 +237,7 @@ const Begin = () => {
             <Grid item xs={12}>
               <Grid
                 container
+                justifyContent="center"
                 sx={{
                   height: {
                     xs: "auto",
@@ -246,17 +247,18 @@ const Begin = () => {
                     smUp: "120px;",
                   },
                   margin: "auto",
+                  width: "100%",
                 }}
               >
                 <Box
                   sx={{
                     width: {
-                      xs: "35%",
-                      fold: "80%",
+                      xs: "33%",
+                      fold: "70%",
                       iPhoneSe: "90%",
-                      iPhone12Pro: "100%",
+                      iPhone12Pro: "90%",
                     },
-                    margin: "auto",
+                    maxHeight: "100%",
                   }}
                 >
                   <VoiceOnlyImage
@@ -305,7 +307,7 @@ const Begin = () => {
                   sx={{
                     width: {
                       xs: "26%",
-                      fold: "57%",
+                      fold: "50%",
                       iPhoneSe: "63%",
                       xl: "70%",
                     },

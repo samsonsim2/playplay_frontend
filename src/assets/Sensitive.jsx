@@ -6,7 +6,6 @@ const SensitiveImage = ({ selected, handleClick }) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 120 120"
       onClick={() => handleClick("sensitive")}
-      // style={{ marginTop: "20px" }}
       className={
         selected ? "parts-stroke stroke-6 deselected" : "parts-stroke stroke-6"
       }
