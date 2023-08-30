@@ -35,7 +35,7 @@ const GameInfo = (props) => {
   const imageMap = {
     Looking: (
       <img
-        src="/assets/Pngs/looking.png"
+        src="../assets/Pngs/looking.png"
         alt="eye"
         style={{
           width: "100%",
@@ -44,7 +44,7 @@ const GameInfo = (props) => {
     ),
     Speaking: (
       <img
-        src="/assets/Pngs/speaking.png"
+        src="../assets/Pngs/speaking.png"
         alt="mouth"
         style={{
           width: "100%",
@@ -53,7 +53,7 @@ const GameInfo = (props) => {
     ),
     Arms: (
       <img
-        src="/assets/Pngs/arms.png"
+        src="../assets/Pngs/arms.png"
         alt="arms"
         style={{
           width: "100%",
@@ -62,7 +62,7 @@ const GameInfo = (props) => {
     ),
     Legs: (
       <img
-        src="/assets/Pngs/legs.png"
+        src="../assets/Pngs/legs.png"
         alt="legs"
         style={{
           width: "100%",
@@ -71,8 +71,8 @@ const GameInfo = (props) => {
     ),
     "Voice only": (
       <img
-        src="/assets/Pngs/voice-only.png"
-        alt="main logo"
+        src="../assets/Pngs/voice-only.png"
+        alt="voice"
         style={{
           width: "100%",
         }}
@@ -89,7 +89,7 @@ const GameInfo = (props) => {
     ),
     "Finger-play": (
       <img
-        src="/assets/Pngs/finger-play.png"
+        src="../assets/Pngs/finger-play.png"
         alt="finger"
         style={{
           width: "100%",
@@ -139,8 +139,6 @@ const GameInfo = (props) => {
                   {game.Tags.map((tag, index) => (
                     <Grid
                       item
-                      // xs={1}
-                      // sx={{ marginRight: "1rem" }}
                       sx={{ width: widthMap[tag.id], marginRight: "1rem" }}
                       key={`${tag.tag}-${index}`}
                     >
