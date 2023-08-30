@@ -35,7 +35,7 @@ const GameInfo = (props) => {
   const imageMap = {
     Looking: (
       <img
-        src="../assets/Pngs/looking.png"
+        src="../assets/Pngs/Looking.png"
         alt="eye"
         style={{
           width: "100%",
@@ -44,7 +44,7 @@ const GameInfo = (props) => {
     ),
     Speaking: (
       <img
-        src="../assets/Pngs/speaking.png"
+        src="../assets/Pngs/Speaking.png"
         alt="mouth"
         style={{
           width: "100%",
@@ -53,7 +53,7 @@ const GameInfo = (props) => {
     ),
     Arms: (
       <img
-        src="../assets/Pngs/arms.png"
+        src="../assets/Pngs/Arms.png"
         alt="arms"
         style={{
           width: "100%",
@@ -62,7 +62,7 @@ const GameInfo = (props) => {
     ),
     Legs: (
       <img
-        src="../assets/Pngs/legs.png"
+        src="../assets/Pngs/Legs.png"
         alt="legs"
         style={{
           width: "100%",
@@ -80,7 +80,7 @@ const GameInfo = (props) => {
     ),
     Sensitive: (
       <img
-        src="/assets/Pngs/sensitive.png"
+        src="/assets/Pngs/Sensitive.png"
         alt="sensitive"
         style={{
           width: "100%",
