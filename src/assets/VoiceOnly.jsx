@@ -7,7 +7,7 @@ const VoiceOnlyImage = ({ selected, handleClick }) => {
       viewBox="0 15 104.62 80"
       onClick={() => handleClick("voice")}
       className={
-        selected ? "parts-stroke stroke-1 deselected" : "parts-stroke stroke-1"
+        selected ? "parts-stroke stroke-7 deselected" : "parts-stroke stroke-7"
       }
       style={{ width: "100%", height: "100%" }}
     >
