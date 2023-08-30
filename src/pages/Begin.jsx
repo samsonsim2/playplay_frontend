@@ -185,11 +185,11 @@ const Begin = () => {
                 margin: {
                   xs: `-20px auto auto auto`,
                   xsUp: `-28px auto auto auto`,
-                  fold: `-34px auto auto auto`,
-                  iPhoneSe: `-40px auto auto auto`,
+                  fold: `-39px auto auto auto`,
+                  iPhoneSe: `-50px auto auto auto`,
                   iPhone12Pro: "-60px auto auto auto",
-                  smUp2: `-60px auto auto auto`,
-                  smUp: `-70px auto auto auto`,
+                  smUp2: `-70px auto auto auto`,
+                  smUp: `-80px auto auto auto`,
                 },
                 position: "relative",
                 zIndex: 10,
@@ -229,11 +229,7 @@ const Begin = () => {
       </p>
       <Grid container justifyContent="space-around">
         <Grid item xs={12} fold={3} sx={{ mb: { xs: "20px", fold: "0" } }}>
-          <Grid
-            container
-            // style={{ height: "120px" }}
-            justifyContent="center"
-          >
+          <Grid container justifyContent="center">
             <Grid item xs={12}>
               <Grid
                 container
