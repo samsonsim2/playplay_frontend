@@ -1,8 +1,10 @@
+import { useRef } from "react";
 import { Container, Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const navigate = useNavigate();
+
   return (
     <div
       style={{
@@ -16,8 +18,8 @@ const Home = () => {
       <img
         src="assets/Pngs/Background-09.png"
         alt="main logo"
+        className="landing-image"
         style={{
-          width: "100%",
           height: "100%",
           padding: 0,
           margin: 0,
