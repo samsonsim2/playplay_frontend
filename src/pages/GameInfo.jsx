@@ -129,10 +129,12 @@ const GameInfo = (props) => {
                 <p className="header-text">{game.title}</p>
               </Grid>
               <Grid item xs={12}>
-                {game.content.split("<br />").map((paragraph, index) => (
-                  <p className="para-text" key={index}>
-                    {paragraph}
-                  </p>
+                {game.content.split("\n").map((line, lineIndex) => (
+                  <Fragment key={lineIndex}>
+                    {lineIndex > 0 && <br />}{" "}
+                    {/* Add <br /> except for the first line */}
+                    {line}
+                  </Fragment>
                 ))}
               </Grid>
               <Grid item xs={12}>
