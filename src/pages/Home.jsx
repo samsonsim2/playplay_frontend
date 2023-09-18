@@ -27,7 +27,7 @@ const Home = () => {
         style={{
           zIndex: 10,
           position: "absolute",
-          bottom: 15,
+          bottom: 35,
           width: "100%",
           display: "flex",
           justifyContent: "center",

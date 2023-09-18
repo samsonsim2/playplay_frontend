@@ -15,11 +15,14 @@ const Layout = () => {
 
   return (
     <>
-      <Container
-        maxWidth="sm"
-        sx={{
+      <div
+        style={{
           padding: 0,
           margin: 0,
+          position: currentPath === "/" ? "fixed" : "static",
+          overflow: currentPath === "/" ? "hidden" : "auto",
+          height: "100vh",
+          maxWidth: "600px",
         }}
       >
         {currentPath === "/" ? (
@@ -31,7 +34,7 @@ const Layout = () => {
             </Navbar>
           </>
         )}
-      </Container>
+      </div>
     </>
   );
 };
