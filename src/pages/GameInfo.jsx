@@ -15,7 +15,7 @@ import FingerPlayImage from "../assets/FingerPlay";
 
 const GameInfo = (props) => {
   let { state } = useLocation();
-  console.log("state: ", state);
+  // console.log("state: ", state);
 
   const {
     data: games,
@@ -30,7 +30,7 @@ const GameInfo = (props) => {
     cacheTime: 0, // Disable data cache
   });
 
-  console.log(games);
+  // console.log(games);
 
   const imageMap = {
     Looking: (
@@ -129,7 +129,11 @@ const GameInfo = (props) => {
                 <p className="header-text">{game.title}</p>
               </Grid>
               <Grid item xs={12}>
-                <p className="para-text">{game.content}</p>
+                {game.content.split("<br />").map((paragraph, index) => (
+                  <p className="para-text" key={index}>
+                    {paragraph}
+                  </p>
+                ))}
               </Grid>
               <Grid item xs={12}>
                 <Grid container>

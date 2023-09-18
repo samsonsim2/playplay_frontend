@@ -26,7 +26,7 @@ const SensitiveImage = ({ selected, handleClick }) => {
         onClick={() => handleClick("sensitive")}
         d="m16.16,23.01C7.69,33.01,2.58,45.95,2.58,60.08c0,31.71,25.7,57.42,57.42,57.42,14.13,0,27.07-5.1,37.07-13.58"
       />
-      <line class="cls-1" x1="14.28" y1="14.37" x2="105.87" y2="105.96" />
+      <line className="cls-1" x1="14.28" y1="14.37" x2="105.87" y2="105.96" />
     </svg>
   );
 };
