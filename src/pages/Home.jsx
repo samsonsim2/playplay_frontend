@@ -10,7 +10,7 @@ const Home = () => {
         position: "relative",
         maxHeight: "100vh",
         maxWidth: "100vw",
-        overflowY: "hidden",
+        overflow: "hidden",
       }}
     >
       <img
@@ -27,7 +27,7 @@ const Home = () => {
         style={{
           zIndex: 10,
           position: "absolute",
-          bottom: 10,
+          bottom: 15,
           width: "100%",
           display: "flex",
           justifyContent: "center",
