@@ -7,7 +7,7 @@ const Home = () => {
     <div
       style={{
         zIndex: 0,
-        position: "fixed",
+        position: "relative",
         maxHeight: "100vh",
         maxWidth: "100vw",
         overflow: "hidden",
