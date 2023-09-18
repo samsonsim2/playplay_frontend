@@ -139,8 +139,16 @@
   width: 100%;
 }
 
-@media screen and (max-width: 375px) {
+/* @media screen and (max-width: 375px) {
   .landing-image {
     width: 87vw;
+  }
+} */
+
+@supports (-webkit-hyphens: none) {
+  @media screen and (max-width: 375px) {
+    .landing-image {
+      width: 87vw;
+    }
   }
 }
