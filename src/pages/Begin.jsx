@@ -1,5 +1,5 @@
 import { Button, Grid, Box, Typography } from "@mui/material";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Fragment } from "react";
 import LookingImage from "../assets/Looking";
 import SpeakingImage from "../assets/Speaking";
 import ArmsImage from "../assets/Arms";
@@ -85,23 +85,10 @@ const Begin = () => {
   };
 
   return (
-    <>
-      <p
-        style={{
-          margin: "0 auto 20px auto",
-          textAlign: "center",
-        }}
-        className="header-text"
-      >
-        let's play without:
-      </p>
+    <Fragment style={{ position: "relative", overflow: "hidden" }}>
+      <p className="header-text-space header-text">let's play without:</p>
 
-      <Grid
-        container
-        spacing={0.2}
-        justifyContent="center"
-        // style={{ width: "100%", margin: "auto" }}
-      >
+      <Grid container spacing={0.2} justifyContent="center">
         <Grid item xs={5}>
           <Grid container direction="column" sx={{ height: "100%" }}>
             <Grid
@@ -218,15 +205,7 @@ const Begin = () => {
           </Grid>
         </Grid>
       </Grid>
-      <p
-        style={{
-          margin: "50px auto 20px auto",
-          textAlign: "center",
-        }}
-        className="header-text"
-      >
-        special playstyle:
-      </p>
+      <p className="special-play-style-space header-text">special playstyle:</p>
       <Grid container justifyContent="space-around">
         <Grid item xs={12} fold={3} sx={{ mb: { xs: "20px", fold: "0" } }}>
           <Grid container justifyContent="center">
@@ -390,12 +369,14 @@ const Begin = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Box sx={{ mt: { xs: "40px", smUp2: "70px" } }}>
+      <div className="play-button-space">
+        {/* <Box sx={{ mt: { xs: "30px", smUp2: "70px" } }}> */}
         <Link to="game-info" state={dataForQuery} className="link-button">
           Play-Play!
         </Link>
-      </Box>
-    </>
+        {/* </Box> */}
+      </div>
+    </Fragment>
   );
 };
 

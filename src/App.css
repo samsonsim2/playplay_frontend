@@ -47,7 +47,14 @@
   font-weight: 700;
   font-size: 1.2rem;
   width: 100%;
-  margin: 0;
+  text-align: center;
+}
+
+.game-header-text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
 }
 
 .para-text {
@@ -139,16 +146,45 @@
   width: 100%;
 }
 
-/* @media screen and (max-width: 375px) {
-  .landing-image {
-    width: 87vw;
-  }
-} */
+.special-play-style-space {
+  margin: 50px auto 15px auto;
+}
 
+.header-text-space {
+  margin: 0px auto 15px auto;
+}
+
+.play-button-space {
+  margin-top: 30px;
+}
+
+.break-word {
+  overflow-wrap: break-word;
+}
+
+@media screen and (min-width: 450px) {
+  .play-button-space {
+    margin-top: 70px;
+  }
+}
+
+/* Media queries for apple devices */
 @supports (-webkit-hyphens: none) {
   @media screen and (max-width: 375px) {
     .landing-image {
       width: 87vw;
+    }
+  }
+
+  @media screen and (max-height: 622px) {
+    .header-text-space {
+      margin: 0px auto 5px auto;
+    }
+    .special-play-style-space {
+      margin: 25px auto 15px auto;
+    }
+    .play-button-space {
+      margin-top: 10px;
     }
   }
 }

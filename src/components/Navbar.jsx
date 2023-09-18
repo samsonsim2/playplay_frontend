@@ -59,7 +59,7 @@ const Navbar = (props) => {
       </ElevationScroll>
       <Toolbar />
       <Container>
-        <Box sx={{ my: 2 }}>{props.children}</Box>
+        <Box sx={{ mb: 2 }}>{props.children}</Box>
       </Container>
     </>
   );

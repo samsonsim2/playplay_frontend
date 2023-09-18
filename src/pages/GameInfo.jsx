@@ -126,9 +126,9 @@ const GameInfo = (props) => {
           games.map((game, index) => (
             <Fragment key={`${game.title}-${index}`}>
               <Grid item xs={12} sx={{ mt: index === 0 ? 0 : 3 }}>
-                <p className="header-text">{game.title}</p>
+                <p className="game-header-text">{game.title}</p>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} className="break-word">
                 {game.content.split("\n").map((line, lineIndex) => (
                   <Fragment key={lineIndex}>
                     {lineIndex > 0 && <br />}{" "}

@@ -19,8 +19,12 @@ const Layout = () => {
         style={{
           padding: 0,
           margin: 0,
-          position: currentPath === "/" ? "fixed" : "static",
-          overflow: currentPath === "/" ? "hidden" : "auto",
+          position:
+            currentPath === "/" || currentPath === "/begin"
+              ? "fixed"
+              : "static",
+          overflow:
+            currentPath === "/" || currentPath === "/begin" ? "hidden" : "auto",
           height: "100vh",
           maxWidth: "600px",
         }}
