@@ -162,6 +162,10 @@
   overflow-wrap: break-word;
 }
 
+.home-button-space {
+  bottom: 7vh;
+}
+
 @media screen and (min-width: 450px) {
   .play-button-space {
     margin-top: 70px;
@@ -170,9 +174,17 @@
 
 /* Media queries for apple devices */
 @supports (-webkit-hyphens: none) {
-  @media screen and (max-width: 375px) {
+  .home-button-space {
+    bottom: 8vh;
+  }
+  @media screen and (max-height: 553px) {
     .landing-image {
-      width: 87vw;
+      position: relative;
+      bottom: 70px;
+      width: 100%;
+    }
+    .home-button-space {
+      bottom: 90px;
     }
   }
 
@@ -185,6 +197,16 @@
     }
     .play-button-space {
       margin-top: 10px;
+    }
+  }
+  @media screen and (min-height: 554px) and (max-height: 629px) {
+    .landing-image {
+      position: relative;
+      bottom: 30px;
+      width: 100%;
+    }
+    .home-button-space {
+      bottom: 70px;
     }
   }
 }

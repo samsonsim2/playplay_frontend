@@ -85,7 +85,7 @@ const Begin = () => {
   };
 
   return (
-    <Fragment style={{ position: "relative", overflow: "hidden" }}>
+    <Fragment>
       <p className="header-text-space header-text">let's play without:</p>
 
       <Grid container spacing={0.2} justifyContent="center">

@@ -30,7 +30,7 @@ const GameInfo = (props) => {
     cacheTime: 0, // Disable data cache
   });
 
-  // console.log(games);
+  console.log(games);
 
   const imageMap = {
     Looking: (

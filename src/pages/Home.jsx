@@ -26,10 +26,11 @@ const Home = () => {
         }}
       />
       <div
+        className="home-button-space"
         style={{
           zIndex: 10,
           position: "absolute",
-          bottom: 35,
+          // bottom: 50,
           width: "100%",
           display: "flex",
           justifyContent: "center",
