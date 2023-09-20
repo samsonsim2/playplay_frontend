@@ -166,6 +166,10 @@
   bottom: 7vh;
 }
 
+.instruction-text > p {
+  margin-bottom: 0px;
+}
+
 @media screen and (min-width: 450px) {
   .play-button-space {
     margin-top: 70px;
